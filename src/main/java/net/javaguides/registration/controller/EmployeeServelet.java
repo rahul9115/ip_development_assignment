@@ -15,7 +15,7 @@ import net.javaguides.registration.model.Employee;
 /**
  * Servlet implementation class EmployeeServelet
  */
-@WebServlet("/EmployeeServelet")
+@WebServlet("/")
 public class EmployeeServelet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private EmployeeDao employeeDao;
@@ -39,7 +39,7 @@ public class EmployeeServelet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		RequestDispatcher dispatcher =request.getRequestDispatcher("/WEB-INF/views/employeeregister.jsp");
+		RequestDispatcher dispatcher =request.getRequestDispatcher("/employeeregister.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -69,9 +69,9 @@ public class EmployeeServelet extends HttpServlet {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        RequestDispatcher dispatcher =request.getRequestDispatcher("/WEB-INF/views/employeedetails.jsp");
+        RequestDispatcher dispatcher =request.getRequestDispatcher("/employeedetails.jsp");
         dispatcher.forward(request, response);
-        response.sendRedirect("employeedetails.jsp");
+        //response.sendRedirect("employeedetails.jsp");
     }
 		
 
